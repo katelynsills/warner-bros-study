@@ -13,12 +13,25 @@ case, and the six later Ninth Circuit opinions on copyright in characters.
   roster of the 56 opinions citing Warner, a standard-library Python script that
   redraws the chart from the CSV alone, and the scripts used in the study.
   See [`chart-data/README.md`](chart-data/README.md) for how the counts were made.
-- **The opinions** (release asset, not in the tree):
-  [`warner-opinions-5994.tar.gz`](https://github.com/katelynsills/warner-bros-study/releases/latest)
-  holds the text of every opinion read for the study, 5,994 files as UTF-8
+- **The opinions and filings** (release asset, not in the tree):
+  [`warner-opinions-1864.tar.gz`](https://github.com/katelynsills/warner-bros-study/releases/latest)
+  holds the text of every opinion read for the study, 1,864 files as UTF-8
   plain text, with a `manifest.csv` (path, source, CourtListener ids, case
-  name, court, date, citations, provenance) and a README on how the text was
-  made and what it may be used for. 69 MB compressed, 224 MB unpacked.
+  name, court, date, citations, provenance), the Carroll Shelby v. Halicki
+  briefs, amicus brief, certification motion and cert petition as PDF and
+  text, and a README on how the text was made and what it may be used for.
+  28 MB compressed, 85 MB unpacked.
+
+## A note on the scan's false hits
+
+The corpus scan matched each target's reporter citation without a digit
+boundary in front of the volume number, so "845 F.2d 119" matched the pattern
+for Nichols v. Universal, 45 F.2d 119, and a few other short volume numbers
+did the same. The raw hit set was 5,751 opinions; 4,129 of them matched only
+inside a longer volume number. The bundle re-tests every hit with the boundary
+over the same raw text the scan read and leaves those out. None of the seven
+cases in the chart has a volume number short enough to be affected, and every
+citing opinion in `chart-data/citers.csv` is in the bundle.
 
 ## Sources and credit
 
