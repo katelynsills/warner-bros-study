@@ -28,4 +28,11 @@ please credit Free Law Project if you reuse them. The rest were pulled from
 PACER, the RECAP Archive, govinfo, the Ninth Circuit's website, and one
 casebook copy on H2O. Details are in the README inside the tarball.
 
+## Licence
+
+The code and the CSV tables in this repository are released under the MIT
+License (see `LICENSE`). The court opinions in the release tarball are public
+records and are not covered by that licence; see the credit line above and the
+README inside the tarball.
+
 Corrections welcome as issues on this repository.
